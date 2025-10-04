@@ -18,6 +18,8 @@ import 'package:shadcn_ui_widgetbook/ui/widgets/shad_form_usecases.dart'
     as _shadcn_ui_widgetbook_ui_widgets_shad_form_usecases;
 import 'package:shadcn_ui_widgetbook/ui/widgets/shad_input_usecases.dart'
     as _shadcn_ui_widgetbook_ui_widgets_shad_input_usecases;
+import 'package:shadcn_ui_widgetbook/ui/widgets/shad_progress_usecases.dart'
+    as _shadcn_ui_widgetbook_ui_widgets_shad_progress_usecases;
 import 'package:widgetbook/widgetbook.dart' as _widgetbook;
 
 final directories = <_widgetbook.WidgetbookNode>[
@@ -121,6 +123,31 @@ final directories = <_widgetbook.WidgetbookNode>[
             name: 'with_icon',
             builder: _shadcn_ui_widgetbook_ui_widgets_shad_input_usecases
                 .buildShadInputWithIconUseCase,
+          ),
+        ],
+      ),
+      _widgetbook.WidgetbookComponent(
+        name: 'ShadProgress',
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'custom_colors',
+            builder: _shadcn_ui_widgetbook_ui_widgets_shad_progress_usecases
+                .buildShadProgressCustomColorsUseCase,
+          ),
+          _widgetbook.WidgetbookUseCase(
+            name: 'default',
+            builder: _shadcn_ui_widgetbook_ui_widgets_shad_progress_usecases
+                .buildShadProgressDefaultUseCase,
+          ),
+          _widgetbook.WidgetbookUseCase(
+            name: 'indeterminate',
+            builder: _shadcn_ui_widgetbook_ui_widgets_shad_progress_usecases
+                .buildShadProgressIndeterminateUseCase,
+          ),
+          _widgetbook.WidgetbookUseCase(
+            name: 'rounded',
+            builder: _shadcn_ui_widgetbook_ui_widgets_shad_progress_usecases
+                .buildShadProgressRoundedUseCase,
           ),
         ],
       ),
