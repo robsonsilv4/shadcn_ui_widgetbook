@@ -1,3 +1,5 @@
+import 'dart:developer' as dev;
+
 import 'package:flutter/material.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 import 'package:widgetbook/widgetbook.dart';
@@ -70,12 +72,12 @@ Widget buildShadAlertWithActionsUseCase(BuildContext context) {
         child: Row(
           children: [
             ShadButton(
-              onPressed: () => debugPrint('Confirmed'),
+              onPressed: () => dev.log('Confirmed'),
               child: const Text('Confirm'),
             ),
             const SizedBox(width: 8),
             ShadButton.outline(
-              onPressed: () => debugPrint('Cancelled'),
+              onPressed: () => dev.log('Cancelled'),
               child: const Text('Cancel'),
             ),
           ],
@@ -93,7 +95,10 @@ Widget buildShadAlertCustomIconUseCase(BuildContext context) {
   return ConstrainedBox(
     constraints: const BoxConstraints(maxWidth: 480),
     child: ShadAlert(
-      icon: const Icon(LucideIcons.star),
+      icon: CircleAvatar(
+        backgroundColor: ShadTheme.of(context).colorScheme.primary,
+        child: const Icon(LucideIcons.star),
+      ),
       title: Text(
         context.knobs.string(label: 'title', initialValue: 'Custom Icon Alert'),
       ),
