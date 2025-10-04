@@ -12,6 +12,8 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:shadcn_ui_widgetbook/ui/widgets/shad_button_usecases.dart'
     as _shadcn_ui_widgetbook_ui_widgets_shad_button_usecases;
+import 'package:shadcn_ui_widgetbook/ui/widgets/shad_input_usecases.dart'
+    as _shadcn_ui_widgetbook_ui_widgets_shad_input_usecases;
 import 'package:widgetbook/widgetbook.dart' as _widgetbook;
 
 final directories = <_widgetbook.WidgetbookNode>[
@@ -60,6 +62,36 @@ final directories = <_widgetbook.WidgetbookNode>[
             name: 'with_icon',
             builder: _shadcn_ui_widgetbook_ui_widgets_shad_button_usecases
                 .buildShadButtonWithIconUseCase,
+          ),
+        ],
+      ),
+      _widgetbook.WidgetbookComponent(
+        name: 'ShadInput',
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'default',
+            builder: _shadcn_ui_widgetbook_ui_widgets_shad_input_usecases
+                .buildShadInputDefaultUseCase,
+          ),
+          _widgetbook.WidgetbookUseCase(
+            name: 'disabled',
+            builder: _shadcn_ui_widgetbook_ui_widgets_shad_input_usecases
+                .buildShadInputDisabledUseCase,
+          ),
+          _widgetbook.WidgetbookUseCase(
+            name: 'multiline',
+            builder: _shadcn_ui_widgetbook_ui_widgets_shad_input_usecases
+                .buildShadInputMultilineUseCase,
+          ),
+          _widgetbook.WidgetbookUseCase(
+            name: 'password',
+            builder: _shadcn_ui_widgetbook_ui_widgets_shad_input_usecases
+                .buildShadInputPasswordUseCase,
+          ),
+          _widgetbook.WidgetbookUseCase(
+            name: 'with_icon',
+            builder: _shadcn_ui_widgetbook_ui_widgets_shad_input_usecases
+                .buildShadInputWithIconUseCase,
           ),
         ],
       ),
