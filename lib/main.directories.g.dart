@@ -10,6 +10,8 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:shadcn_ui_widgetbook/ui/widgets/shad_alert_usecases.dart'
+    as _shadcn_ui_widgetbook_ui_widgets_shad_alert_usecases;
 import 'package:shadcn_ui_widgetbook/ui/widgets/shad_button_usecases.dart'
     as _shadcn_ui_widgetbook_ui_widgets_shad_button_usecases;
 import 'package:shadcn_ui_widgetbook/ui/widgets/shad_input_usecases.dart'
@@ -20,6 +22,31 @@ final directories = <_widgetbook.WidgetbookNode>[
   _widgetbook.WidgetbookFolder(
     name: 'components',
     children: [
+      _widgetbook.WidgetbookComponent(
+        name: 'ShadAlert',
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'custom_icon',
+            builder: _shadcn_ui_widgetbook_ui_widgets_shad_alert_usecases
+                .buildShadAlertCustomIconUseCase,
+          ),
+          _widgetbook.WidgetbookUseCase(
+            name: 'default',
+            builder: _shadcn_ui_widgetbook_ui_widgets_shad_alert_usecases
+                .buildShadAlertDefaultUseCase,
+          ),
+          _widgetbook.WidgetbookUseCase(
+            name: 'destructive',
+            builder: _shadcn_ui_widgetbook_ui_widgets_shad_alert_usecases
+                .buildShadAlertDestructiveUseCase,
+          ),
+          _widgetbook.WidgetbookUseCase(
+            name: 'with_actions',
+            builder: _shadcn_ui_widgetbook_ui_widgets_shad_alert_usecases
+                .buildShadAlertWithActionsUseCase,
+          ),
+        ],
+      ),
       _widgetbook.WidgetbookComponent(
         name: 'ShadButton',
         useCases: [
