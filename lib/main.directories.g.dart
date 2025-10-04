@@ -14,6 +14,8 @@ import 'package:shadcn_ui_widgetbook/ui/widgets/shad_alert_usecases.dart'
     as _shadcn_ui_widgetbook_ui_widgets_shad_alert_usecases;
 import 'package:shadcn_ui_widgetbook/ui/widgets/shad_button_usecases.dart'
     as _shadcn_ui_widgetbook_ui_widgets_shad_button_usecases;
+import 'package:shadcn_ui_widgetbook/ui/widgets/shad_form_usecases.dart'
+    as _shadcn_ui_widgetbook_ui_widgets_shad_form_usecases;
 import 'package:shadcn_ui_widgetbook/ui/widgets/shad_input_usecases.dart'
     as _shadcn_ui_widgetbook_ui_widgets_shad_input_usecases;
 import 'package:widgetbook/widgetbook.dart' as _widgetbook;
@@ -119,6 +121,31 @@ final directories = <_widgetbook.WidgetbookNode>[
             name: 'with_icon',
             builder: _shadcn_ui_widgetbook_ui_widgets_shad_input_usecases
                 .buildShadInputWithIconUseCase,
+          ),
+        ],
+      ),
+      _widgetbook.WidgetbookFolder(
+        name: 'form',
+        children: [
+          _widgetbook.WidgetbookComponent(
+            name: 'ShadForm',
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'default',
+                builder: _shadcn_ui_widgetbook_ui_widgets_shad_form_usecases
+                    .buildShadFormDefaultUseCase,
+              ),
+              _widgetbook.WidgetbookUseCase(
+                name: 'disabled',
+                builder: _shadcn_ui_widgetbook_ui_widgets_shad_form_usecases
+                    .buildShadFormDisabledUseCase,
+              ),
+              _widgetbook.WidgetbookUseCase(
+                name: 'with_validation',
+                builder: _shadcn_ui_widgetbook_ui_widgets_shad_form_usecases
+                    .buildShadFormWithValidationUseCase,
+              ),
+            ],
           ),
         ],
       ),
