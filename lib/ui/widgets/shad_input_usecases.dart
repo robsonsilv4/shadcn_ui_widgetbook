@@ -42,8 +42,8 @@ Widget buildShadInputWithIconUseCase(BuildContext context) {
       placeholder: Text(
         context.knobs.string(label: 'placeholder', initialValue: 'With icon'),
       ),
-      leading: const Icon(Icons.search),
-      trailing: const Icon(Icons.clear),
+      leading: const Icon(LucideIcons.search),
+      trailing: const Icon(LucideIcons.x),
       enabled: context.knobs.boolean(label: 'enabled', initialValue: true),
       onChanged: (value) => dev.log('Input changed: $value'),
     ),

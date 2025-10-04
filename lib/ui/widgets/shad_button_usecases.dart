@@ -125,8 +125,8 @@ Widget buildShadButtonLinkUseCase(BuildContext context) {
 )
 Widget buildShadButtonWithIconUseCase(BuildContext context) {
   return ShadButton(
-    leading: const Icon(Icons.star),
-    trailing: const Icon(Icons.arrow_forward),
+    leading: const Icon(LucideIcons.star),
+    trailing: const Icon(LucideIcons.arrowRight),
     onPressed: () => dev.log('With Icon pressed'),
     enabled: context.knobs.boolean(label: 'enabled', initialValue: true),
     size: context.knobs.object.dropdown<ShadButtonSize>(
